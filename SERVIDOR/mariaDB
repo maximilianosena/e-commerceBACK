@@ -1,0 +1,64 @@
+CREATE TABLE products (
+    id INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    cost DECIMAL(10, 2),
+    currency VARCHAR(3),
+    soldCount INT,
+    image VARCHAR(255),
+    catID INT,
+    FOREIGN KEY (catID) REFERENCES categories(id)
+)
+
+INSERT INTO products (id, name, description, cost, currency, soldCount, image, catID) VALUES (
+ {
+            50921,
+            "Chevrolet Onix Joy",
+             "Generación 2019, variedad de colores. Motor 1.0, ideal para ciudad.",
+            13500,
+             "USD",
+             14,
+            "img/prod50921_1.jpg",
+            101
+        },
+        {
+             50922,
+             "Fiat Way",
+             "La versión de Fiat que brinda confort y a un precio accesible.",
+           14500,
+             "USD",
+             52,
+             "img/prod50922_1.jpg",
+            101
+        },
+        {
+            50923,
+             "Suzuki Celerio",
+             "Un auto que se ha ganado la buena fama por su economía con el combustible.",
+             12500,
+             "USD",
+            25,
+            "img/prod50923_1.jpg",
+            101
+        },
+        {
+             50924,
+           "Peugeot 208",
+            "El modelo de auto que se sigue renovando y manteniendo su prestigio en comodidad.",
+            15200,
+            "USD",
+             17,
+           "img/prod50924_1.jpg",
+           101
+        },
+        {
+            50925,
+            "Bugatti Chiron",
+             "El mejor hiperdeportivo de mundo. Producción limitada a 500 unidades.",
+             3500000,
+            "USD",
+             0,
+            "img/prod50925_1.jpg",
+            101
+        }
+)

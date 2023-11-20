@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/login.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    body {
+      background-color: rgb(230, 235, 240);
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <main id="main" class="mb-3">
+
+    <div class="contenedor">
+
+      <form action="index.html" class="form-box needs-validation" novalidate>
+
+         <div>
+          <img src="img/img1.png" width="100%" height="100%">
+          <h1 class="title"> Inicio de sesión </h1>
+        </div>
+
+        <!--Nombre de usuario-->
+        <label for="user">
+         <i class="fa-solid fa-user"></i>
+          <input type="text" placeholder="Email" id="user" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+          <div class="valid-feedback">
+                
+          </div>
+          <div class="invalid-feedback">
+            Debe ingresar un correo válido
+          </div>
+        </label>
+
+        <!--Contraseña -->
+        <label for="password">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" placeholder="Contraseña" id="password" required pattern=".{6,}">
+          <i class='bx bx-show-alt'></i>
+          <div class="valid-feedback">
+                
+          </div>
+          <div class="invalid-feedback">
+            Debe ingresar una contraseña (6 dígitos min.)
+          </div>
+        </label>
+
+        <!-- Botón de Login-->
+        <label for="submit">
+          <i class="fa-solid fa-right-to-bracket"></i>
+          <input type="submit" name="Login" id="submit">
+        </label>
+
+      </form>
+
+    </div>
+
+    <footer id="footer" class="text-muted">
+      <div class="container-fluid">
+          <div class="row-cols-auto">
+              <div class="col-md-auto">
+                  <p>
+                      <a href="#">Volver arriba</a>
+                  </p>
+              </div>
+              <div class="col-md-auto">
+                  <p class="text-md-end">Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a></p>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  </main>
+
+  
+<script src="js/login.js"></script>
+
+</body>
+</html>
+

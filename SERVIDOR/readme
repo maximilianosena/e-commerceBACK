@@ -1,0 +1,52 @@
+Inicializa el Servidor abriendo la terminal en la carpeta Servidor, y utilizando npm run dev
+Trabajamos sobre el puerto http://localhost:5500
+
+ENDPOINTS:
+
+Método HTTP - GET:
+
+/categories -> Te retorna cada una de las categorías existentes en el servidor, con todas sus propiedades.
+
+/products -> Te retorna cada uno de los productos existentes en el servidor, con todas sus propiedades.
+
+/products/:id -> Te retorna los productos de una categoría en particular a partir de su ID, con todas sus propiedades.
+
+/product-info/:id -> Te retorna un producto en particular a partir de su ID, con todas sus propiedades.
+
+/product-info/comments/:id -> Te devuelve los comentarios realizados en un producto en particular.
+
+/user_cart/:user -> Te devuelve el carrito de compras de un usuario en particular a través de su nombre de user.
+
+/user/:id -> Te retorna la información sobre un usuario en particular a través de su ID.
+
+/user/access/:accessEmail -> Retorna el Email de acceso y la contraseña, a partir del Email ingresado
+
+
+Método HTTP - POST:
+
+/ -> Permite la creación de una nueva categoría de Productos.
+
+/user/access -> Permite el ingreso y guardado del Email de Acceso y la Contraseña.
+
+/user/ -> Permite el ingreso de la información de un nuevo usuario.
+
+/product-info/ -> Ingresa un nuevo producto en el carrito. 
+(Este punto se puede verificar desde la página web al agregar un producto al carrito, la base de datos lo ingresa en la
+tabla user_cart)
+
+
+Método HTTP - DELETE:
+
+/user_cart/trash/:user/:id -> Permite eliminar un producto de la base de datos, a través de dos párametros: el usuario que lo agregó a su carrito, y el ID del producto.
+
+
+Método HTTP - PUT:
+
+/user/:id -> Permite actualizar la información de un usuario en particular, a través de su ID.
+
+------------------*-------------------------------
+
+"app.post("/login") en app.js tiene como condición ingresar el último correo y password guardado en el metodo POST
+/user/access, y retorna un token de seguridad, que debe guardarse en el HTTP headers, como valor, bajo la clave access-token.
+
+Sin el token, no se permite el acceso a la ruta /user_cart.
